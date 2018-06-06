@@ -1,7 +1,7 @@
 def move(board, index, char = "X")
   if valid_move?(board, index)
     board[index] = char
-    display_board
+    display_board(board)
   end
 end
 
