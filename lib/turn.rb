@@ -1,5 +1,8 @@
-def move(board, index, char)
-  
+def move(board, index, char = "X")
+  if valid_move?(board, index)
+    board[index] = char
+    display_board
+  end
 end
 
 def input_to_index(input)
