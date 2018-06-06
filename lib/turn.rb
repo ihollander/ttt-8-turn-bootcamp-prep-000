@@ -1,8 +1,16 @@
-def move(board, index, char = "X")
+def turn(board)
+  input = gets.strip
+  index = input_to_index(input)
   if valid_move?(board, index)
+    move
+  else
+    turn(board)
+  end
+end
+
+def move(board, index, char = "X")
     board[index] = char
     display_board(board)
-  end
 end
 
 def input_to_index(input)
